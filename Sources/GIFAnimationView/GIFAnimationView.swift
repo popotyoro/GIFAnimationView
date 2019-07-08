@@ -1,12 +1,4 @@
-//
-//  UIImage+Extension.swift
-//  GIFAnimationView
-//
-//  Created by popota on 2019/07/08.
-//  Copyright © 2019 Tagayasu. All rights reserved.
-//
-
-import Foundation
+import UIKit
 
 extension UIImage {
     public static func animationImage(name: String) -> UIImage? {

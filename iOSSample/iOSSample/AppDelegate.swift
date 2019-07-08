@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Sample
+//  iOSSample
 //
 //  Created by popota on 2019/07/08.
 //  Copyright © 2019 Tagayasu. All rights reserved.

@@ -13,28 +13,28 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOSSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z3t-UP-aCv">
-                                <rect key="frame" x="7" y="248" width="400" height="400"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCX-gc-Rme">
+                                <rect key="frame" x="32" y="273" width="350" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="2Yy-S0-oq3"/>
-                                    <constraint firstAttribute="height" constant="400" id="jE0-Zh-vpc"/>
+                                    <constraint firstAttribute="width" constant="350" id="8Pc-mV-Ofn"/>
+                                    <constraint firstAttribute="height" constant="350" id="Ufc-1u-KXT"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="z3t-UP-aCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAv-CE-grV"/>
-                            <constraint firstItem="z3t-UP-aCv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nO0-vr-Zh4"/>
+                            <constraint firstItem="aCX-gc-Rme" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MqE-9I-OYX"/>
+                            <constraint firstItem="aCX-gc-Rme" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w4e-DF-6rp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="z3t-UP-aCv" id="n9M-a0-AUj"/>
+                        <outlet property="imageView" destination="aCX-gc-Rme" id="IFS-Dt-Zt1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
