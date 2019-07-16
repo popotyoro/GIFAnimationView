@@ -25,15 +25,25 @@
                                     <constraint firstAttribute="height" constant="400" id="jE0-Zh-vpc"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DER-ek-MLa">
+                                <rect key="frame" x="184" y="668" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="animationPlayButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FaY-Hp-GL6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="z3t-UP-aCv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UAv-CE-grV"/>
+                            <constraint firstItem="DER-ek-MLa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bdz-G2-wfb"/>
+                            <constraint firstItem="DER-ek-MLa" firstAttribute="top" secondItem="z3t-UP-aCv" secondAttribute="bottom" constant="20" id="cpL-7L-IHz"/>
                             <constraint firstItem="z3t-UP-aCv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nO0-vr-Zh4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="animationPlayButton" destination="DER-ek-MLa" id="YDG-Iw-e4x"/>
                         <outlet property="imageView" destination="z3t-UP-aCv" id="n9M-a0-AUj"/>
                     </connections>
                 </viewController>
