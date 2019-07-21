@@ -35,8 +35,10 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     func setupSubViews() {
-        imageView.animationImages = UIImage.animationImages(name: "sampleGIF")
+        let gifData = UIImage.gifData(name: "sampleGIF")
+        imageView.animationImages = gifData?.animationImages
         imageView.animationRepeatCount = 0
+        imageView.animationDuration = gifData?.animateDuration ?? 0.0
         animationPlayButton.setTitle("Animation Start", for: .normal)
     }
     
