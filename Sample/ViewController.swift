@@ -21,14 +21,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubViews()
-        setupObservers()
     }
 
     @IBAction func animationPlayButtonDidTapped(_ sender: UIButton) {
         if imageView.isAnimating {
             imageView.stopAnimating()
+            animationPlayButton.setTitle("Animation Start", for: .normal)
         } else {
             imageView.startAnimating()
+            animationPlayButton.setTitle("Animation Stop", for: .normal)
+            if animationDuration() > 0.0 {
+                DispatchQueue.main.asyncAfter(deadline: .now() + animationDuration()) { [unowned self] in
+                    self.animationPlayButton.setTitle("Animation Start", for: .normal)
+                }
+            }
         }
     }
 }
@@ -36,22 +42,15 @@ class ViewController: UIViewController {
 private extension ViewController {
     func setupSubViews() {
         let gifData = UIImage.gifData(name: "sampleGIF")
+        imageView.image = gifData?.animationImages?.first
         imageView.animationImages = gifData?.animationImages
         imageView.animationRepeatCount = 0
         imageView.animationDuration = gifData?.animateDuration ?? 0.0
         animationPlayButton.setTitle("Animation Start", for: .normal)
     }
     
-    func setupObservers() {
-        observers.append(contentsOf: [
-            imageView.observe(\.isAnimating) {[weak self] (imageView, value) in
-                if value.newValue ?? false {
-                    self?.animationPlayButton.setTitle("Animation Stop", for: .normal)
-                } else {
-                    self?.animationPlayButton.setTitle("Animation Start", for: .normal)
-                }
-            }
-            ])
+    func animationDuration() -> Double {
+        return imageView.animationDuration * Double(imageView.animationRepeatCount)
     }
 }
 
